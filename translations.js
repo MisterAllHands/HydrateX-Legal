@@ -223,7 +223,7 @@ const translations = {
 
         de: {
             title: "Datenschutzrichtlinie",
-            intro: "Hydrate-X („wir", „unser" oder „die App") ist eine Trinkwasser-Tracking-Anwendung, die Ihnen hilft, Ihre tägliche Wasseraufnahme zu überwachen und gesunde Trinkgewohnheiten beizubehalten. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen erfassen, verwenden und schützen.",
+            intro: "Hydrate-X ('wir', 'unser' oder 'die App') ist eine Trinkwasser-Tracking-Anwendung, die Ihnen hilft, Ihre tägliche Wasseraufnahme zu überwachen und gesunde Trinkgewohnheiten beizubehalten. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen erfassen, verwenden und schützen.",
 
             section1Title: "Informationen, die wir erfassen",
             section1_1Title: "Persönliche Informationen, die Sie bereitstellen",
@@ -845,10 +845,10 @@ const translations = {
 
         de: {
             title: "Nutzungsbedingungen",
-            intro: "Durch das Herunterladen, Installieren oder Nutzen von Hydrate-X („die App") erklären Sie sich mit diesen Nutzungsbedingungen („Bedingungen") einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie die App nicht.",
+            intro: "Durch das Herunterladen, Installieren oder Nutzen von Hydrate-X ('die App') erklären Sie sich mit diesen Nutzungsbedingungen ('Bedingungen') einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie die App nicht.",
 
             section1Title: "1. Annahme der Bedingungen",
-            section1Text: "Durch das Herunterladen, Installieren oder Nutzen von Hydrate-X („die App") erklären Sie sich mit diesen Nutzungsbedingungen („Bedingungen") einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie die App nicht.",
+            section1Text: "Durch das Herunterladen, Installieren oder Nutzen von Hydrate-X ('die App') erklären Sie sich mit diesen Nutzungsbedingungen ('Bedingungen') einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie die App nicht.",
 
             section2Title: "2. Beschreibung des Dienstes",
             section2Text: "Hydrate-X ist eine persönliche Trinkwasser-Tracking-Anwendung, die Benutzern hilft:",
