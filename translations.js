@@ -1608,7 +1608,6 @@ const LanguageUtils = {
     }
 };
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-    LanguageUtils.init();
-});
+// Export for use in pages
+// Pages handle their own initialization by calling LanguageUtils.getCurrentLanguage()
+// and setting up their own language selector listeners

@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="translations.js"></script>
 </head>
 <body>
     <div class="container">
@@ -43,6 +42,7 @@
         </footer>
     </div>
 
+    <script src="translations.js"></script>
     <script>
         function renderList(items) {
             return '<ul>' + items.map(item => `<li>${item}</li>`).join('') + '</ul>';
@@ -52,7 +52,10 @@
             const t = translations.terms[lang];
             const ui = translations.ui[lang];
 
-            if (!t) return;
+            if (!t || !ui) {
+                console.error('Missing translations for language:', lang);
+                return;
+            }
 
             // Back link
             document.getElementById('back-link').textContent = ui.backToLegal;
@@ -174,11 +177,22 @@
             applyTermsTranslations(e.detail.lang);
         });
 
-        // Apply initial translation
-        document.addEventListener('DOMContentLoaded', () => {
+        // Initialize immediately since scripts are at bottom of body
+        (function() {
+            // Setup language selector
+            const selector = document.getElementById('language-selector');
             const lang = LanguageUtils.getCurrentLanguage();
+
+            if (selector) {
+                selector.value = lang;
+                selector.addEventListener('change', (e) => {
+                    LanguageUtils.setLanguage(e.target.value);
+                });
+            }
+
+            // Apply translations
             applyTermsTranslations(lang);
-        });
+        })();
     </script>
 </body>
 </html>
