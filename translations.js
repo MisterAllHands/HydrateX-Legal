@@ -1,5 +1,6 @@
 // Hydrate-X Legal Pages Translations
 // Supported languages: en, de, es, fr, ja, ru
+// Version: 1.0.1
 
 const translations = {
     // Language names for selector
