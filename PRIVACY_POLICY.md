@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Hydrate-X ("we," "our," or "the app") is a hydration tracking application designed to help you monitor your daily water intake and maintain healthy hydration habits. This Privacy Policy explains how we collect, use, and protect your information.
+Hydrate-X is a hydration tracking application designed to help you monitor your daily water intake and maintain healthy hydration habits. This Privacy Policy explains how we collect, use, and protect your information.
 
 ---
 
