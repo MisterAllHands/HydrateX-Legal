@@ -8,44 +8,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="logo">
-                <div class="logo-icon">💧</div>
-                <h1>Hydrate-X</h1>
+            <div class="header-row">
+                <div class="logo">
+                    <div class="logo-icon">💧</div>
+                    <h1>Hydrate-X</h1>
+                </div>
+                <div class="language-selector-container">
+                    <select id="language-selector" class="language-selector">
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="ja">日本語</option>
+                        <option value="ru">Русский</option>
+                    </select>
+                </div>
             </div>
             <p class="tagline">Stay hydrated, stay healthy</p>
         </header>
 
         <main>
             <section class="hero">
-                <h2>Legal Documents</h2>
-                <p>Transparency and trust are important to us. Below you'll find our legal documents that explain how we handle your data and the terms of using our app.</p>
+                <h2 id="index-title">Legal Documents</h2>
+                <p id="index-subtitle">Transparency and trust are important to us. Below you'll find our legal documents that explain how we handle your data and the terms of using our app.</p>
             </section>
 
             <div class="cards">
                 <a href="privacy-policy.html" class="card">
                     <div class="card-icon">🔒</div>
-                    <h3>Privacy Policy</h3>
-                    <p>Learn how we collect, use, and protect your personal information.</p>
-                    <span class="card-link">Read Privacy Policy →</span>
+                    <h3 id="privacy-title">Privacy Policy</h3>
+                    <p id="privacy-desc">Learn how we collect, use, and protect your personal information.</p>
+                    <span class="card-link" id="privacy-link">Read Privacy Policy →</span>
                 </a>
 
                 <a href="terms-of-service.html" class="card">
                     <div class="card-icon">📋</div>
-                    <h3>Terms of Service</h3>
-                    <p>Understand the terms and conditions for using Hydrate-X.</p>
-                    <span class="card-link">Read Terms of Service →</span>
+                    <h3 id="terms-title">Terms of Service</h3>
+                    <p id="terms-desc">Understand the terms and conditions for using Hydrate-X.</p>
+                    <span class="card-link" id="terms-link">Read Terms of Service →</span>
                 </a>
             </div>
         </main>
 
         <footer>
-            <p>© 2024 MisterAllHands. All rights reserved.</p>
-            <p class="contact">Questions? Contact us at <a href="mailto:aldoknownas@gmail.com">aldoknownas@gmail.com</a></p>
+            <p id="copyright">© 2024 MisterAllHands. All rights reserved.</p>
+            <p class="contact"><span id="contact-question">Questions? Contact us at</span> <a href="mailto:aldoknownas@gmail.com">aldoknownas@gmail.com</a></p>
         </footer>
     </div>
+
+    <script>
+        // Apply translations when language changes
+        function applyIndexTranslations(lang) {
+            const idx = translations.index[lang];
+            const ui = translations.ui[lang];
+
+            if (idx) {
+                document.getElementById('index-title').textContent = idx.title;
+                document.getElementById('index-subtitle').textContent = idx.subtitle;
+                document.getElementById('privacy-title').textContent = idx.privacyTitle;
+                document.getElementById('privacy-desc').textContent = idx.privacyDesc;
+                document.getElementById('privacy-link').textContent = idx.privacyLink;
+                document.getElementById('terms-title').textContent = idx.termsTitle;
+                document.getElementById('terms-desc').textContent = idx.termsDesc;
+                document.getElementById('terms-link').textContent = idx.termsLink;
+            }
+
+            if (ui) {
+                document.getElementById('copyright').textContent = ui.copyright;
+                document.getElementById('contact-question').textContent = ui.contactQuestion;
+            }
+        }
+
+        // Listen for language changes
+        window.addEventListener('languageChanged', (e) => {
+            applyIndexTranslations(e.detail.lang);
+        });
+
+        // Apply initial translation after LanguageUtils initializes
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = LanguageUtils.getCurrentLanguage();
+            applyIndexTranslations(lang);
+        });
+    </script>
 </body>
 </html>

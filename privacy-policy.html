@@ -8,150 +8,159 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="logo">
-                <div class="logo-icon">💧</div>
-                <h1>Hydrate-X</h1>
+            <div class="header-row">
+                <div class="logo">
+                    <div class="logo-icon">💧</div>
+                    <h1>Hydrate-X</h1>
+                </div>
+                <div class="language-selector-container">
+                    <select id="language-selector" class="language-selector">
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="ja">日本語</option>
+                        <option value="ru">Русский</option>
+                    </select>
+                </div>
             </div>
         </header>
 
-        <a href="index.html" class="back-link">← Back to Legal Documents</a>
+        <a href="index.html" class="back-link" id="back-link">← Back to Legal Documents</a>
 
-        <article class="legal-page">
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Last Updated: December 9, 2024</p>
-
-            <h2>Introduction</h2>
-            <p>Hydrate-X ("we," "our," or "the app") is a hydration tracking application designed to help you monitor your daily water intake and maintain healthy hydration habits. This Privacy Policy explains how we collect, use, and protect your information.</p>
-
-            <h2>Information We Collect</h2>
-
-            <h3>Personal Information You Provide</h3>
-            <p>When you use Hydrate-X, you may provide the following information:</p>
-            <ul>
-                <li><strong>Account Information:</strong> Email address (when creating an account or signing in)</li>
-                <li><strong>Profile Information:</strong> Name, gender, age, height, and weight</li>
-                <li><strong>Health & Fitness Data:</strong> Daily water intake logs, beverage preferences, weight tracking entries, and hydration goals</li>
-            </ul>
-
-            <h3>Information Collected Automatically</h3>
-            <ul>
-                <li><strong>Device Identifiers:</strong> Anonymous user ID for authentication and subscription management</li>
-                <li><strong>Purchase Information:</strong> Subscription status (processed through Apple's App Store and RevenueCat)</li>
-            </ul>
-
-            <h3>Information We Do NOT Collect</h3>
-            <ul>
-                <li>Location data</li>
-                <li>Contacts or address book</li>
-                <li>Photos (unless you choose to set a profile photo, which is stored locally only)</li>
-                <li>Browsing history</li>
-                <li>Third-party advertising identifiers</li>
-            </ul>
-
-            <h2>How We Use Your Information</h2>
-            <p>We use your information solely to:</p>
-            <ol>
-                <li><strong>Provide App Functionality:</strong> Calculate personalized hydration goals based on your profile (weight, age, activity level)</li>
-                <li><strong>Track Your Progress:</strong> Store your water intake history and weight tracking data</li>
-                <li><strong>Manage Your Account:</strong> Enable sign-in across devices using Firebase Authentication</li>
-                <li><strong>Process Subscriptions:</strong> Verify premium subscription status through RevenueCat</li>
-                <li><strong>Send Notifications:</strong> Deliver hydration reminders (only if you enable them)</li>
-            </ol>
-
-            <h2>Data Storage and Security</h2>
-
-            <h3>Local Storage</h3>
-            <ul>
-                <li>Most of your data (profile, water entries, preferences) is stored <strong>locally on your device</strong></li>
-                <li>Local data is encrypted using AES-256-GCM encryption</li>
-                <li>Encryption keys are stored securely in the iOS Keychain</li>
-            </ul>
-
-            <h3>Cloud Services</h3>
-            <ul>
-                <li><strong>Firebase Authentication:</strong> Your email and authentication tokens are processed by Google Firebase to enable account sign-in</li>
-                <li><strong>RevenueCat:</strong> Your anonymous user ID and subscription status are processed to manage premium features</li>
-            </ul>
-
-            <h3>Data Retention</h3>
-            <ul>
-                <li>Your data remains on your device until you delete the app or clear app data</li>
-                <li>Account data on Firebase is retained until you delete your account</li>
-                <li>You can delete your account at any time through the app settings</li>
-            </ul>
-
-            <h2>Third-Party Services</h2>
-            <p>Hydrate-X uses the following third-party services:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Service</th>
-                        <th>Purpose</th>
-                        <th>Privacy Policy</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Firebase Authentication</td>
-                        <td>User sign-in</td>
-                        <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
-                    </tr>
-                    <tr>
-                        <td>RevenueCat</td>
-                        <td>Subscription management</td>
-                        <td><a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a></td>
-                    </tr>
-                    <tr>
-                        <td>Google Sign-In</td>
-                        <td>Optional sign-in method</td>
-                        <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
-                    </tr>
-                    <tr>
-                        <td>Apple Sign-In</td>
-                        <td>Optional sign-in method</td>
-                        <td><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>Your Rights and Choices</h2>
-            <p>You have the right to:</p>
-            <ul>
-                <li><strong>Access Your Data:</strong> View all your data within the app</li>
-                <li><strong>Export Your Data:</strong> Export your hydration history from the app settings</li>
-                <li><strong>Delete Your Data:</strong> Delete your account and all associated data</li>
-                <li><strong>Opt Out of Notifications:</strong> Disable reminders in app settings or iOS settings</li>
-                <li><strong>Use Without Account:</strong> Use the app's core features without creating an account</li>
-            </ul>
-
-            <h2>Children's Privacy</h2>
-            <p>Hydrate-X is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.</p>
-
-            <h2>International Users</h2>
-            <p>Your information may be transferred to and processed in countries other than your own (including the United States) where Firebase and RevenueCat servers are located. By using the app, you consent to this transfer.</p>
-
-            <h2>Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last Updated" date and, where appropriate, through in-app notifications.</p>
-
-            <h2>Contact Us</h2>
-            <p>If you have questions about this Privacy Policy or your data, please contact us at:</p>
-            <p><strong>Email:</strong> <a href="mailto:aldoknownas@gmail.com">aldoknownas@gmail.com</a></p>
-
-            <h2>California Privacy Rights (CCPA)</h2>
-            <p>California residents have additional rights regarding their personal information. You may request to know what personal information we collect and request deletion. Contact us at the email above to exercise these rights.</p>
-
-            <h2>GDPR Compliance (European Users)</h2>
-            <p>If you are in the European Economic Area, you have rights under the General Data Protection Regulation including the right to access, rectify, port, and erase your data. Our legal basis for processing is your consent and legitimate interests in providing the service.</p>
+        <article class="legal-page" id="privacy-content">
+            <!-- Content will be dynamically populated -->
         </article>
 
         <footer>
-            <p>© 2024 MisterAllHands. All rights reserved.</p>
-            <p class="contact">Questions? Contact us at <a href="mailto:aldoknownas@gmail.com">aldoknownas@gmail.com</a></p>
+            <p id="copyright">© 2024 MisterAllHands. All rights reserved.</p>
+            <p class="contact"><span id="contact-question">Questions? Contact us at</span> <a href="mailto:aldoknownas@gmail.com">aldoknownas@gmail.com</a></p>
         </footer>
     </div>
+
+    <script>
+        function renderList(items) {
+            return '<ul>' + items.map(item => `<li>${item}</li>`).join('') + '</ul>';
+        }
+
+        function renderTable(tableData) {
+            let html = '<table><thead><tr>';
+            tableData.headers.forEach(h => html += `<th>${h}</th>`);
+            html += '</tr></thead><tbody>';
+
+            const links = [
+                'https://policies.google.com/privacy',
+                'https://www.revenuecat.com/privacy',
+                'https://policies.google.com/privacy',
+                'https://www.apple.com/legal/privacy/'
+            ];
+
+            tableData.rows.forEach((row, idx) => {
+                html += '<tr>';
+                row.forEach((cell, cellIdx) => {
+                    if (cellIdx === 2) {
+                        html += `<td><a href="${links[idx]}" target="_blank">${cell}</a></td>`;
+                    } else {
+                        html += `<td>${cell}</td>`;
+                    }
+                });
+                html += '</tr>';
+            });
+            html += '</tbody></table>';
+            return html;
+        }
+
+        function applyPrivacyTranslations(lang) {
+            const p = translations.privacy[lang];
+            const ui = translations.ui[lang];
+
+            if (!p) return;
+
+            // Back link
+            document.getElementById('back-link').textContent = ui.backToLegal;
+
+            // Build content
+            let html = `
+                <h1>${p.title}</h1>
+                <p class="last-updated">${ui.lastUpdated}</p>
+
+                <p>${p.intro}</p>
+
+                <h2>${p.section1Title}</h2>
+                <h3>${p.section1_1Title}</h3>
+                <p>${p.section1_1Text}</p>
+                ${renderList(p.section1_1Items)}
+
+                <h3>${p.section1_2Title}</h3>
+                ${renderList(p.section1_2Items)}
+
+                <h3>${p.section1_3Title}</h3>
+                ${renderList(p.section1_3Items)}
+
+                <h2>${p.section2Title}</h2>
+                <p>${p.section2Text}</p>
+                ${renderList(p.section2Items)}
+
+                <h2>${p.section3Title}</h2>
+                <h3>${p.section3_1Title}</h3>
+                ${renderList(p.section3_1Items)}
+
+                <h3>${p.section3_2Title}</h3>
+                ${renderList(p.section3_2Items)}
+
+                <h3>${p.section3_3Title}</h3>
+                ${renderList(p.section3_3Items)}
+
+                <h2>${p.section4Title}</h2>
+                <p>${p.section4Text}</p>
+                ${renderTable(p.section4Table)}
+
+                <h2>${p.section5Title}</h2>
+                <p>${p.section5Text}</p>
+                ${renderList(p.section5Items)}
+
+                <h2>${p.section6Title}</h2>
+                <p>${p.section6Text}</p>
+
+                <h2>${p.section7Title}</h2>
+                <p>${p.section7Text}</p>
+
+                <h2>${p.section8Title}</h2>
+                <p>${p.section8Text}</p>
+
+                <h2>${p.section9Title}</h2>
+                <p>${p.section9Text}</p>
+                <p><strong>Email:</strong> <a href="mailto:aldoknownas@gmail.com">aldoknownas@gmail.com</a></p>
+
+                <h2>${p.section10Title}</h2>
+                <p>${p.section10Text}</p>
+
+                <h2>${p.section11Title}</h2>
+                <p>${p.section11Text}</p>
+            `;
+
+            document.getElementById('privacy-content').innerHTML = html;
+
+            // Footer
+            document.getElementById('copyright').textContent = ui.copyright;
+            document.getElementById('contact-question').textContent = ui.contactQuestion;
+        }
+
+        // Listen for language changes
+        window.addEventListener('languageChanged', (e) => {
+            applyPrivacyTranslations(e.detail.lang);
+        });
+
+        // Apply initial translation
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = LanguageUtils.getCurrentLanguage();
+            applyPrivacyTranslations(lang);
+        });
+    </script>
 </body>
 </html>
